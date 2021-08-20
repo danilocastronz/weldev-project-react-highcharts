@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { Paper } from "@material-ui/core";
+import styled from "@emotion/styled";
 
-// Container component
+const ChartContainer = styled(Paper)``;
+
 export const Container: FC = ({ children }) => (
-  <Paper elevation={3}>{children}</Paper>
+  <ChartContainer elevation={3}>{children}</ChartContainer>
 );

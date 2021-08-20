@@ -1,6 +1,7 @@
-import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import { Container } from "./components/Chart/Container";
+import { Layout } from "./components/Layout";
 
 const options = {
   title: {
@@ -14,9 +15,11 @@ const options = {
 };
 
 const App = () => (
-  <div>
-    <HighchartsReact highcharts={Highcharts} options={options} />
-  </div>
+  <Layout>
+    <Container>
+      <HighchartsReact highcharts={Highcharts} options={options} />
+    </Container>
+  </Layout>
 );
 
 export default App;

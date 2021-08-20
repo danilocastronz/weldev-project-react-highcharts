@@ -1,6 +1,6 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import React from "react";
+
 import { Container } from "./Container";
 
 interface ChartProps {
@@ -14,14 +14,23 @@ interface ChartProps {
   canExport: boolean;
 }
 
-// Chart component
+const BuildChartOptions = () => ({
+  title: {
+    text: "My chart",
+  },
+  series: [
+    {
+      data: [1, 2, 3],
+    },
+  ],
+});
+
 export const Chart = ({}: ChartProps) => {
-  // get chart options
   const options = BuildChartOptions();
 
   return (
     <Container>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <HighchartsReact highcharts={Highcharts} options={{ options }} />
     </Container>
   );
 };
