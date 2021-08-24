@@ -1,25 +1,15 @@
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
-import { Container } from "./components/Chart/Container";
-import { Layout } from "./components/Layout";
-
-const options = {
-  title: {
-    text: "My chart",
-  },
-  series: [
-    {
-      data: [1, 2, 3],
-    },
-  ],
-};
+import { Chart } from './components/Chart';
+import { Layout } from './components/Layout';
 
 const App = () => (
-  <Layout>
-    <Container>
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </Container>
-  </Layout>
+  <Layout
+    chart={<Chart title="Dan" subtitle="Castro" />}
+    menu={
+      <>
+        <div>test</div>
+      </>
+    }
+  />
 );
 
 export default App;
