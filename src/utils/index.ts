@@ -1,3 +1,3 @@
-import { BuildChartOptions } from "./Charts";
+import { BuildLegend } from './Charts';
 
-export { BuildChartOptions };
+export { BuildLegend };
