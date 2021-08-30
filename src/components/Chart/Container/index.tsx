@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styled from '@emotion/styled';
-import { Paper } from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
 
 export const Container: FC = ({ children }) => (
   <ChartContainer variant="outlined">{children}</ChartContainer>
