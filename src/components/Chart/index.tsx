@@ -1,7 +1,8 @@
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import { BuildLegend } from '../../utils/Charts';
 
-// import { Container } from './Container';
+import { Container } from './Container';
 
 interface ChartProps {
   title?: string;
@@ -9,7 +10,7 @@ interface ChartProps {
 }
 
 export const Chart = ({ title, subtitle }: ChartProps) => {
-  const options = {
+  const options: Highcharts.Options = {
     title: {
       text: title,
     },
@@ -83,11 +84,11 @@ export const Chart = ({ title, subtitle }: ChartProps) => {
     },
   };
 
+  options.legend = BuildLegend();
+
   return (
-    // <Container>
-    <div style={{ width: 'auto' }}>
+    <Container>
       <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
-    // </Container>
+    </Container>
   );
 };

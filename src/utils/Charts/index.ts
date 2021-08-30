@@ -1,3 +1,3 @@
-export function BuildChartOptions() {
-  return {};
-}
+import { BuildLegend } from './Legends';
+
+export { BuildLegend };
