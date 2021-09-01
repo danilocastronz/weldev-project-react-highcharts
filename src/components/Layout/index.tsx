@@ -9,21 +9,27 @@ interface LayoutProps {
 export const Layout = ({ chart, menu }: LayoutProps) => {
   return (
     <GridLayout>
-      <>{chart}</>
-      <>{menu}</>
+      <MenuLayout>{menu}</MenuLayout>
+      <ChartLayout>{chart}</ChartLayout>
     </GridLayout>
   );
 };
 
 const GridLayout = styled.div`
-  /* position */
-  margin: 20%;
   /* layout */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 20px);
-  grid-gap: 15px;
-  justify-items: stretch;
-  align-items: stretch;
-  width: 100vw;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  /* position */
+  margin-top: 100px;
+  padding: 43px;
+`;
+
+const MenuLayout = styled.div`
+  grid-column: 1;
+`;
+
+const ChartLayout = styled.div`
+  grid-column: 2;
 `;

@@ -1,14 +1,14 @@
-import { Chart } from './components/Chart';
-import { Layout } from './components/Layout';
+import { Chart, Layout, Menu } from './components';
 
 const App = () => (
   <Layout
-    chart={<Chart title="Dan" subtitle="Castro" />}
-    menu={
-      <>
-        <div>test</div>
-      </>
+    chart={
+      <Chart
+        title="React Highcharts Demo"
+        subtitle="Powered by Welcome, Developer"
+      />
     }
+    menu={<Menu />}
   />
 );
 
