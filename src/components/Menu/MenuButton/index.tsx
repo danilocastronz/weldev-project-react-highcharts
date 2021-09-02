@@ -13,4 +13,7 @@ export const MenuButton = ({ label }: MenuButtonProps) => (
 
 const StyledButton = styled(Button)`
   min-width: 150px;
+  :hover {
+    transform: scale(1.05);
+  }
 `;

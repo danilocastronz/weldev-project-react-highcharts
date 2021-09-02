@@ -24,6 +24,8 @@ const GridLayout = styled.div`
   /* position */
   margin-top: 100px;
   padding: 43px;
+  /* style */
+  background: ${(props) => props.theme.palette?.background?.default || '#fff'};
 `;
 
 const MenuLayout = styled.div`
