@@ -1,11 +1,12 @@
 {
   "name": "weldev-project-react-highcharts",
-  "description": "Highcharts in a React app - Welcome, Developer project.",
+  "description": "Highcharts with React - a Welcome, Developer project.",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Dan Castro",
-    "url": "https://github.com/danilocastronz"
+    "url": "https://github.com/danilocastronz",
+    "email": "technology.castro@gmail.com"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
