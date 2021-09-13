@@ -5,13 +5,16 @@
         "plugin:react/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended",
         "prettier"
     ],
     "rules": {
         "react/prop-types": 0,
         "react/react-in-jsx-scope": 0,
-        "import/no-unresolved": 0
+        "import/no-unresolved": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0
     },
+    "parser": "@typescript-eslint/parser",
     "plugins": [
         "react",
         "import",

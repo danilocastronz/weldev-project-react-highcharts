@@ -1,6 +1,6 @@
 import { ThemeOptions } from '@material-ui/core/styles';
 
-let theme: ThemeOptions = {
+const theme: ThemeOptions = {
   palette: {
     type: 'dark',
     primary: {

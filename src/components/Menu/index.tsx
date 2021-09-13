@@ -1,21 +1,25 @@
 import styled from '@emotion/styled';
 
-import { MenuButton } from './MenuButton';
+import { Button } from '../Button';
 
-export const Menu = () => {
-  return (
-    <MenuContainer>
-      <MenuButton label="Axes" />
-      <MenuButton label="Legends" />
-      <MenuButton label="Title" />
-      <MenuButton label="Colours" />
-      <MenuButton label="Chart Type" />
-    </MenuContainer>
-  );
-};
+import Features from '../../utils/Features';
+import { FeaturesProps } from '../../types/Features';
+
+export const Menu = () => (
+  <MenuContainer>
+    {Features.map((feature: FeaturesProps) => (
+      <Button
+        key={feature.id}
+        id={feature.id}
+        label={feature.title}
+        description={feature.description}
+        enabled={feature.enabled}
+      />
+    ))}
+  </MenuContainer>
+);
 
 const MenuContainer = styled.div`
-  flex: 1;
   flex-flow: row wrap;
   display: flex;
   flex-direction: row;
