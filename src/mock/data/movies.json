@@ -1,0 +1,82 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "imdb": 9.3
+    },
+    {
+        "title": "The Godfather",
+        "year": 1972,
+        "imdb": 9.2
+    },
+    {
+        "title": "The Godfather: Part II",
+        "year": 1974,
+        "imdb": 9.0
+    },
+    {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "imdb": 9.0
+    },
+    {
+        "title": "Schindler's List",
+        "year": 1993,
+        "imdb": 8.9
+    },
+    {
+        "title": "Pulp Fiction",
+        "year": 1994,
+        "imdb": 8.9
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "year": 2003,
+        "imdb": 8.9
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "imdb": 8.9
+    },
+    {
+        "title": "Fight Club",
+        "year": 1999,
+        "imdb": 8.8
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "year": 2001,
+        "imdb": 8.8
+    },
+    {
+        "title": "Forrest Gump",
+        "year": 1994,
+        "imdb": 8.8
+    },
+    {
+        "title": "Inception",
+        "year": 2010,
+        "imdb": 8.8
+    },
+    {
+        "title": "Star Wars: Episode V - The Empire Strikes Back",
+        "year": 1980,
+        "imdb": 8.8
+    },
+    {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "year": 1975,
+        "imdb": 8.7
+    },
+    {
+        "title": "Goodfellas",
+        "year": 1990,
+        "imdb": 8.7
+    },
+    {
+        "title": "The Matrix",
+        "year": 1999,
+        "imdb": 8.7
+    }
+]

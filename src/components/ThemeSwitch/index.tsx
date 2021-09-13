@@ -7,6 +7,8 @@ interface ThemeSwitchProps {
 
 export const ThemeSwitch = ({ isDefaultTheme, toggleTheme }: ThemeSwitchProps) => (
   <Tooltip placement="bottom" title="Switch Theme">
-    <IconButton onClick={toggleTheme}>{isDefaultTheme ? '🌙' : '☀️'}</IconButton>
+    <IconButton onClick={toggleTheme} size="medium">
+      {isDefaultTheme ? '🌙' : '🌞'}
+    </IconButton>
   </Tooltip>
 );

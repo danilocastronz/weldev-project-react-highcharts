@@ -15,10 +15,12 @@ export const Menu = () => {
 };
 
 const MenuContainer = styled.div`
+  flex: 1;
+  flex-flow: row wrap;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   > * {
     margin: 3px;
   }

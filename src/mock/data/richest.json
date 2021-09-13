@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Jeff Bezos",
+        "age": 51,
+        "netWorth": "$1.25B"
+    },
+    {
+        "name": "Bill Gates",
+        "age": 55,
+        "netWorth": "$1.67B"
+    },
+    {
+        "name": "Warren Buffett",
+        "age": 65,
+        "netWorth": "$1.77B"
+    },
+    {
+        "name": "Bernard Arnault",
+        "age": 64,
+        "netWorth": "$1.95B"
+    },
+    {
+        "name": "Carlos Slim Helu",
+        "age": 65,
+        "netWorth": "$2.03B"
+    },
+    {
+        "name": "Amancio Ortega",
+        "age": 67,
+        "netWorth": "$2.25B"
+    },
+    {
+        "name": "Larry Ellison",
+        "age": 72,
+        "netWorth": "$2.41B"
+    },
+    {
+        "name": "Mark Zuckerberg",
+        "age": 46,
+        "netWorth": "$2.43B"
+    },
+    {
+        "name": "Michael Bloomberg",
+        "age": 65,
+        "netWorth": "$2.46B"
+    },
+    {
+        "name": "Charles Koch",
+        "age": 67,
+        "netWorth": "$2.55B"
+    },
+    {
+        "name": "David Koch",
+        "age": 63,
+        "netWorth": "$2.58B"
+    },
+    {
+        "name": "Larry Page",
+        "age": 63,
+        "netWorth": "$2.59B"
+    }
+]

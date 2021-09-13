@@ -17,10 +17,10 @@ export const Chart = ({ title, subtitle, data }: ChartProps) => {
       type: 'column',
     },
     title: {
-      text: title,
+      text: title ?? 'Highcharts',
     },
     subtitle: {
-      text: subtitle,
+      text: subtitle ?? 'Highcharts',
     },
     yAxis: {
       title: {

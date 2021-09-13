@@ -1,0 +1,98 @@
+[
+    {
+        "country": "Norway",
+        "code": "NO",
+        "hdi": "0.9540",
+        "population": "5465.6300"
+    },
+    {
+        "country": "Switzerland",
+        "code": "CH",
+        "hdi": "0.9460",
+        "population": "8715.4940"
+    },
+    {
+        "country": "Ireland",
+        "code": "IE",
+        "hdi": "0.9420",
+        "population": "4982.9070"
+    },
+    {
+        "country": "Hong Kong",
+        "code": "HK",
+        "hdi": "0.9390",
+        "population": "7552.8100"
+    },
+    {
+        "country": "Germany",
+        "code": "DE",
+        "hdi": "0.9390",
+        "population": "83900.4730"
+    },
+    {
+        "country": "Iceland",
+        "code": "IS",
+        "hdi": "0.9380",
+        "population": "343.3530"
+    },
+    {
+        "country": "Australia",
+        "code": "AU",
+        "hdi": "0.9380",
+        "population": "25788.2150"
+    },
+    {
+        "country": "Sweden",
+        "code": "SE",
+        "hdi": "0.9370",
+        "population": "10160.1690"
+    },
+    {
+        "country": "Singapore",
+        "code": "SG",
+        "hdi": "0.9350",
+        "population": "5896.6860"
+    },
+    {
+        "country": "Netherlands",
+        "code": "NL",
+        "hdi": "0.9330",
+        "population": "17173.0990"
+    },
+    {
+        "country": "Denmark",
+        "code": "DK",
+        "hdi": "0.9300",
+        "population": "5813.2980"
+    },
+    {
+        "country": "Finland",
+        "code": "FI",
+        "hdi": "0.9250",
+        "population": "5548.3600"
+    },
+    {
+        "country": "Canada",
+        "code": "CA",
+        "hdi": "0.9220",
+        "population": "38067.9030"
+    },
+    {
+        "country": "New Zealand",
+        "code": "NZ",
+        "hdi": "0.9210",
+        "population": "4860.6430"
+    },
+    {
+        "country": "United Kingdom",
+        "code": "GB",
+        "hdi": "0.9200",
+        "population": "68207.1160"
+    },
+    {
+        "country": "United States",
+        "code": "US",
+        "hdi": "0.9200",
+        "population": "332915.0730"
+    }
+]
