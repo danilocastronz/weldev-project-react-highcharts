@@ -13,7 +13,12 @@ interface ButtonProps {
 }
 
 export const Button = ({ id, label, description, enabled = true }: ButtonProps) => (
-  <Tooltip key={`tooltip-${id}`} placement="bottom" title={enabled ? description : 'Coming soon, guys!'} arrow>
+  <Tooltip
+    key={`tooltip-${id}`}
+    placement="bottom"
+    title={enabled ? description : `${description} - Coming soon, guys!`}
+    arrow
+  >
     <StyledButton variant="outlined" color="primary">
       {label}
     </StyledButton>

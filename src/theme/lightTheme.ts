@@ -10,7 +10,7 @@ const theme: ThemeOptions = {
       main: '#ff6495',
     },
     background: {
-      default: '#f7f4e9',
+      default: '#F8F9FA',
     },
   },
 };

@@ -1,3 +1,4 @@
-import { BuildLegend } from './Charts';
+import Languages from './Languages';
+import Features from './Features';
 
-export { BuildLegend };
+export { Languages, Features };

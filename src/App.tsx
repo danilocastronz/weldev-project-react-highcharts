@@ -4,7 +4,7 @@ import { CssBaseline } from '@material-ui/core';
 import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import styled from '@emotion/styled';
 
-import { Footer, Menu, ThemeSwitch, Chart } from './components';
+import { Footer, Menu, ThemeSwitch, Chart, Greet } from './components';
 
 import { lightTheme, darkTheme, GetTheme } from './theme';
 
@@ -19,6 +19,7 @@ const App = () => {
           <CssBaseline />
           <AppWrapper>
             <MainWrapper>
+              <Greet />
               <ThemeSwitch isDefaultTheme={isDefaultTheme} toggleTheme={themeDispatch} />
               <Chart />
               <Menu />

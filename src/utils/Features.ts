@@ -1,8 +1,8 @@
-import { FeaturesProps } from '../../types/Features';
+import { FeaturesProps } from '../types/Features';
 
 const Features: FeaturesProps[] = [
   {
-    id: 'axes',
+    id: 'axis',
     title: 'Axes',
     description: 'Customize Chart Axes',
     enabled: false,
@@ -69,7 +69,7 @@ const Features: FeaturesProps[] = [
     ],
   },
   {
-    id: 'color',
+    id: 'colorTheme',
     title: 'Color Theme',
     description: 'Customize Chart Color Theme',
     enabled: false,

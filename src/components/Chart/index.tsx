@@ -9,20 +9,28 @@ import { Container } from './Container';
 interface ChartProps {
   title?: string;
   subtitle?: string;
-  // data: Highcharts.SeriesOptionsType[];
 }
 
 export const Chart = ({ title, subtitle }: ChartProps) => {
-  /*eslint no-unused-vars: "warn"*/
   const [options, setOptions] = useState<Highcharts.Options>({
     chart: {
       type: 'line',
     },
     title: {
-      text: title ?? 'Highcharts',
+      text: title ?? 'Solar Employment Growth by Sector, 2010-2016',
     },
     subtitle: {
-      text: subtitle ?? 'Highcharts',
+      text: subtitle ?? 'Source: thesolarfoundation.com',
+    },
+    yAxis: {
+      title: {
+        text: 'Number of Employees',
+      },
+    },
+    xAxis: {
+      accessibility: {
+        rangeDescription: 'Range: 2010 to 2017',
+      },
     },
     plotOptions: {
       series: {
@@ -78,7 +86,11 @@ export const Chart = ({ title, subtitle }: ChartProps) => {
   });
 
   // set chart legend
-  options.legend = BuildLegend({});
+  options.legend = BuildLegend({
+    layout: 'vertical',
+    verticalAlign: 'middle',
+    align: 'right',
+  });
   // set chart data
   // set chart axios
   // set chart colours
