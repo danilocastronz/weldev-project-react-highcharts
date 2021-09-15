@@ -14,8 +14,8 @@ export const Menu = () => {
         <Button
           key={feature.id}
           id={feature.id}
-          label={t(`chart.${feature.id}`)}
-          description={feature.description}
+          label={t(`chart.${feature.id}.name`)}
+          description={t(`chart.${feature.id}.description`)}
           enabled={feature.enabled}
         />
       ))}

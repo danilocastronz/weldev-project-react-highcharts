@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <FooterContent variant="body2" color="textSecondary" align="center">
+    <FooterContent variant="caption" color="textSecondary" align="center">
       {t('footer.text')}
     </FooterContent>
   );

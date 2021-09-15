@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Button as MuiButton, Tooltip } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
 
 interface StyledButtonProps {
   enabled?: boolean;
@@ -12,18 +13,21 @@ interface ButtonProps {
   enabled?: boolean;
 }
 
-export const Button = ({ id, label, description, enabled = true }: ButtonProps) => (
-  <Tooltip
-    key={`tooltip-${id}`}
-    placement="bottom"
-    title={enabled ? description : `${description} - Coming soon, guys!`}
-    arrow
-  >
-    <StyledButton variant="outlined" color="primary">
-      {label}
-    </StyledButton>
-  </Tooltip>
-);
+export const Button = ({ id, label, description, enabled = true }: ButtonProps) => {
+  const { t } = useTranslation();
+  return (
+    <Tooltip
+      key={`tooltip-${id}`}
+      placement="bottom"
+      title={enabled ? description : `${description} (${t('comingSoon')})`}
+      arrow
+    >
+      <StyledButton variant="outlined" color="primary">
+        {label}
+      </StyledButton>
+    </Tooltip>
+  );
+};
 
 const StyledButton = styled(MuiButton)<StyledButtonProps>`
   min-width: 150px;

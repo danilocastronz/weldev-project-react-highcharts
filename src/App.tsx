@@ -46,18 +46,18 @@ const MainWrapper = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 2.5rem);
   /* style */
+  min-height: calc(100vh - 2.5rem);
   background: ${(props) => props.theme.palette?.background?.default || '#fff'};
   > * {
-    margin: 1rem auto;
+    margin: 5px;
   }
 `;
 
 const FooterWrapper = styled.footer`
   /* layout */
-  position: absolute;
   bottom: 0;
+  text-align: center;
   /* style */
   width: 100%;
   height: 2.5rem;
