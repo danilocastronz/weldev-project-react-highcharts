@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 import { Footer, Menu, ThemeSwitch, Chart, Greet } from './components';
 
 import { lightTheme, darkTheme, GetTheme } from './theme';
+import { Translation } from './components/Translation';
 
 const App = () => {
   const [isDefaultTheme, themeDispatch] = useReducer((isDefaultTheme) => !isDefaultTheme, true);
@@ -20,7 +21,10 @@ const App = () => {
           <AppWrapper>
             <MainWrapper>
               <Greet />
-              <ThemeSwitch isDefaultTheme={isDefaultTheme} toggleTheme={themeDispatch} />
+              <OptionsWrapper>
+                <Translation />
+                <ThemeSwitch isDefaultTheme={isDefaultTheme} toggleTheme={themeDispatch} />
+              </OptionsWrapper>
               <Chart />
               <Menu />
             </MainWrapper>
@@ -41,7 +45,6 @@ const AppWrapper = styled.div`
 
 const MainWrapper = styled.main`
   /* layout */
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +54,19 @@ const MainWrapper = styled.main`
   background: ${(props) => props.theme.palette?.background?.default || '#fff'};
   > * {
     margin: 5px;
+  }
+`;
+
+const OptionsWrapper = styled.main`
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* style */
+  background: ${(props) => props.theme.palette?.background?.default || '#fff'};
+  > * {
+    margin: 0 15px;
   }
 `;
 
