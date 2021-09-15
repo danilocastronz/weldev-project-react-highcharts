@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Data Visualization App with Highcharts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Highcharts is one of the most popular and greatest library for charting available today. Used by over 80 of the world's 100 largest companies. It is used in a wide variety of applications, including data visualization, financial analysis, and much more. It is a great tool for creating beautiful charts and interactive data visualizations.
 
-In the project directory, you can run:
+This is a simple data visualization application that shows how to use Highcharts with React. The application is built with React and uses the Highcharts-React wrapper to render the chart. Through the use of the Highcharts API, the application can be easily customized to display different chart types, different chart data, and different chart options.
 
-### `yarn start`
+I've got to say, I'm a fan of Highcharts. I've used it in a number of different applications, and I'm very happy with the way it works. Hope you enjoy it, developers!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Keen to see the app in action? Check it out the [live demo](https://weldev-project-react-highcharts.vercel.app/)!
 
-### `yarn test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following frameworks/libraries have been implemented:
 
-### `yarn build`
+1. [Highcharts](https://www.highcharts.com/)
+2. [React](https://reactjs.org/)
+3. [i18next](https://www.i18next.com/)
+4. [TypeScript](https://www.typescriptlang.org/)
+5. [Material-UI](https://material-ui.com/)
+6. [Prettier](https://prettier.io)
+7. [ESLint](https://eslint.org/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get up and running with the template, you just have to run the _git_ commands below:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/danilocastronz/weldev-project-react-highcharts
+cd weldev-project-react-highcharts
+yarn
+```
 
-### `yarn eject`
+## Contributions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Contributions are more than welcome to our repository, developers. The goal is to make it a space where we contribute together to make it better! Feel free to create your own _pull request_ with the contribution, or if you prefer, reach out to me with your idea 🙋‍♂️
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Versions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- 1.00 - Provides the ability to customize chart legends.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Author
 
-## Learn More
+- [Dan Castro](https://github.com/danilocastronz)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Follow Us
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Enjoyed the project? Follow us on [LinkedIn](https://www.linkedin.com/company/welcome-developer) and [Twitter](https://twitter.com/welcomedevnz).
