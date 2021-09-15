@@ -1,18 +1,12 @@
-import { ThemeOptions } from '@material-ui/core/styles';
+import { responsiveFontSizes, Theme, createTheme } from '@material-ui/core/styles';
 
-const theme: ThemeOptions = {
-  palette: {
-    type: 'dark',
-    primary: {
-      main: '#e60576',
-    },
-    secondary: {
-      main: '#9daaf2',
-    },
-    background: {
-      default: '#1a2238',
-    },
+import { darkThemeOptions, themeOverrides } from './options';
+
+const darkTheme: Theme = createTheme({
+  ...darkThemeOptions,
+  overrides: {
+    ...themeOverrides,
   },
-};
+});
 
-export default theme;
+export default responsiveFontSizes(darkTheme);

@@ -1,40 +1,40 @@
-import { useReducer } from 'react';
+import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@material-ui/core';
 import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import styled from '@emotion/styled';
 
-import { Footer, Menu, ThemeSwitch, Chart, Greet } from './components';
+import { AppContext } from './context/AppContext';
 
-import { lightTheme, darkTheme, GetTheme } from './theme';
-import { Translation } from './components/Translation';
+import { Footer, Menu, ThemeSwitch, Chart, Greet, Translation } from './components';
+import AppClient from './context/AppClient';
 
 const App = () => {
-  const [isDefaultTheme, themeDispatch] = useReducer((isDefaultTheme) => !isDefaultTheme, true);
-  const theme = GetTheme(isDefaultTheme ? lightTheme : darkTheme);
+  const client = new AppClient();
 
   return (
-    <MuiThemeProvider theme={theme}>
-      <ThemeProvider theme={theme}>
-        <StylesProvider injectFirst>
-          <CssBaseline />
-          <AppWrapper>
-            <MainWrapper>
-              <Greet />
-              <OptionsWrapper>
-                <Translation />
-                <ThemeSwitch isDefaultTheme={isDefaultTheme} toggleTheme={themeDispatch} />
-              </OptionsWrapper>
-              <Chart />
-              <Menu />
-            </MainWrapper>
-            <FooterWrapper>
-              <Footer />
-            </FooterWrapper>
-          </AppWrapper>
-        </StylesProvider>
-      </ThemeProvider>
-    </MuiThemeProvider>
+    <AppContext.Provider value={client}>
+      <MuiThemeProvider theme={client.theme}>
+        <ThemeProvider theme={client.theme}>
+          <StylesProvider injectFirst>
+            <CssBaseline />
+            <AppWrapper>
+              <MainWrapper>
+                <Greet />
+                <OptionsWrapper>
+                  <Translation />
+                  <ThemeSwitch />
+                </OptionsWrapper>
+                <Chart />
+                <Menu />
+              </MainWrapper>
+              <FooterWrapper>
+                <Footer />
+              </FooterWrapper>
+            </AppWrapper>
+          </StylesProvider>
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </AppContext.Provider>
   );
 };
 
@@ -73,10 +73,10 @@ const OptionsWrapper = styled.main`
 const FooterWrapper = styled.footer`
   /* layout */
   bottom: 0;
-  text-align: center;
   /* style */
   width: 100%;
   height: 2.5rem;
+  text-align: center;
 `;
 
 export default App;
