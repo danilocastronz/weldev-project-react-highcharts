@@ -30,6 +30,6 @@ const MenuContainer = styled.div`
   justify-content: center;
   align-items: center;
   > * {
-    margin: 3px;
+    margin: 5px;
   }
 `;

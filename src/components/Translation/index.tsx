@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
-import { Icon, Tooltip } from '@material-ui/core';
+import { Icon, Tooltip } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import { Languages } from '../../utils';
@@ -21,7 +21,7 @@ export const Translation = () => {
   };
 
   return (
-    <div>
+    <TranslationWrapper>
       {Languages.sort((a, b) => a.index - b.index)
         .sort((e) => (e.active ? 0 : 1))
         .map((item: LanguagesProps) => (
@@ -36,17 +36,27 @@ export const Translation = () => {
             </StyledLanguageIcon>
           </Tooltip>
         ))}
-    </div>
+    </TranslationWrapper>
   );
 };
 
-const StyledLanguageIcon = styled(Icon)<StyledLanguageIconProps>`
-  margin: 3px;
-  opacity: ${(props) => (props.isSelected ? 1 : 0.5)};
-  font-size: ${(props) => (props.isSelected ? '1.6rem' : '1.2rem')};
-  cursor: ${(props) => (props.isActive ? 'pointer' : 'not-allowed')};
-  :hover {
-    opacity: ${(props) => (props.isActive ? 1 : 0.5)};
-    transition: opacity 0.2s ease-in-out;
+const TranslationWrapper = styled.div`
+  > * {
+    margin: 0 3px;
   }
 `;
+
+const StyledLanguageIcon = styled(Icon)<StyledLanguageIconProps>(
+  (props) => `
+  height: auto;
+  width: auto;
+  opacity: ${props.isSelected ? 1 : 0.5};
+  font-size: ${props.isSelected ? '1.6rem' : '1.2rem'};
+  cursor: ${props.isActive ? 'pointer' : 'not-allowed'};
+  :hover {
+    opacity: ${props.isActive ? 1 : 0.6};
+    font-size: ${props.isActive ? '1.6rem' : '1.2rem'};
+    transition: opacity 0.2s ease-in-out;
+  }
+  `,
+);

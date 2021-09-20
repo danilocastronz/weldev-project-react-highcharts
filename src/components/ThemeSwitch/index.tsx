@@ -1,17 +1,18 @@
 import { useContext } from 'react';
-import { IconButton, Tooltip } from '@material-ui/core';
-import { NightsStay, WbSunny } from '@material-ui/icons';
+import { IconButton, Tooltip } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { NightsStay, WbSunny } from '@mui/icons-material';
 
-import { AppContext } from '../../context/AppContext';
-
-import { lightTheme } from '../../theme';
+import { ColorModeContext } from '../../context/ColorModeContext';
 
 export const ThemeSwitch = () => {
-  const context = useContext(AppContext);
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
+
   return (
     <Tooltip placement="right" title="Switch Theme">
-      <IconButton onClick={context.toggleTheme} size="medium">
-        {context.theme === lightTheme ? <NightsStay color="primary" /> : <WbSunny color="primary" />}
+      <IconButton onClick={colorMode.toggleColorMode} size="medium">
+        {theme.palette.mode === 'light' ? <NightsStay color="primary" /> : <WbSunny color="primary" />}
       </IconButton>
     </Tooltip>
   );

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button as MuiButton, Tooltip } from '@material-ui/core';
+import { Button as MuiButton, Tooltip } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 interface StyledButtonProps {

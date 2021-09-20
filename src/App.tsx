@@ -1,39 +1,70 @@
-import styled from '@emotion/styled';
+import { useMemo, useState } from 'react';
+import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
+import { StylesProvider } from '@mui/styles';
 import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@material-ui/core';
-import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import styled from '@emotion/styled';
 
+// app components
+import { Footer, Menu, ThemeSwitch, Chart, Greet, Translation } from './components';
+
+// app context
 import { AppContext } from './context/AppContext';
 
-import { Footer, Menu, ThemeSwitch, Chart, Greet, Translation } from './components';
+// app client
 import AppClient from './context/AppClient';
+
+// app themes
+import { CssBaseline, responsiveFontSizes } from '@mui/material';
+import { ColorModeContext } from './context/ColorModeContext';
 
 const App = () => {
   const client = new AppClient();
+  const [mode, setMode] = useState<'light' | 'dark'>('light');
+
+  const colorMode = useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [],
+  );
+
+  const theme = useMemo(() => {
+    let theme = createTheme({
+      palette: {
+        mode,
+      },
+    });
+    theme = responsiveFontSizes(theme);
+    return theme;
+  }, [mode]);
 
   return (
     <AppContext.Provider value={client}>
-      <MuiThemeProvider theme={client.theme}>
-        <ThemeProvider theme={client.theme}>
-          <StylesProvider injectFirst>
-            <CssBaseline />
-            <AppWrapper>
-              <MainWrapper>
-                <Greet />
-                <OptionsWrapper>
-                  <Translation />
-                  <ThemeSwitch />
-                </OptionsWrapper>
-                <Chart />
-                <Menu />
-              </MainWrapper>
-              <FooterWrapper>
-                <Footer />
-              </FooterWrapper>
-            </AppWrapper>
-          </StylesProvider>
-        </ThemeProvider>
-      </MuiThemeProvider>
+      <ColorModeContext.Provider value={colorMode}>
+        <MuiThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>
+            <StylesProvider injectFirst>
+              <CssBaseline />
+              <AppWrapper>
+                <MainWrapper>
+                  <Greet />
+                  <OptionsWrapper>
+                    <Translation />
+                    <ThemeSwitch />
+                  </OptionsWrapper>
+                  <Chart />
+                  <Menu />
+                </MainWrapper>
+                <FooterWrapper>
+                  <Footer />
+                </FooterWrapper>
+              </AppWrapper>
+            </StylesProvider>
+          </ThemeProvider>
+        </MuiThemeProvider>
+      </ColorModeContext.Provider>
     </AppContext.Provider>
   );
 };
@@ -65,9 +96,7 @@ const OptionsWrapper = styled.main`
   align-items: center;
   /* style */
   background: ${(props) => props.theme.palette?.background?.default || '#fff'};
-  > * {
-    margin: 0 15px;
-  }
+  height: 65px;
 `;
 
 const FooterWrapper = styled.footer`

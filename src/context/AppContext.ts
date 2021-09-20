@@ -1,10 +1,6 @@
-import { Theme } from '@material-ui/core/styles';
 import { createContext } from 'react';
 
 export interface IAppContext {
-  /* Theme */
-  theme: Theme;
-  toggleTheme: () => void;
   /* i18n */
   Language: string;
   toggleLanguage: (lang: string) => void;
