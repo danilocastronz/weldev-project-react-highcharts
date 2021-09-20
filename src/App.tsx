@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { CssBaseline, responsiveFontSizes } from '@mui/material';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import { StylesProvider } from '@mui/styles';
 import { ThemeProvider } from '@emotion/react';
@@ -14,7 +15,6 @@ import { AppContext } from './context/AppContext';
 import AppClient from './context/AppClient';
 
 // app themes
-import { CssBaseline, responsiveFontSizes } from '@mui/material';
 import { ColorModeContext } from './context/ColorModeContext';
 
 const App = () => {

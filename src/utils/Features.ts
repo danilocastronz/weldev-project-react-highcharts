@@ -1,6 +1,6 @@
-import { FeaturesProps } from '../types/Features';
+import { Feature } from '../types/Features';
 
-const Features: FeaturesProps[] = [
+const Features: Feature[] = [
   {
     id: 'axis',
     title: 'Axes',
@@ -8,22 +8,22 @@ const Features: FeaturesProps[] = [
     enabled: false,
     options: [
       {
-        name: 'Title',
+        title: 'Title',
         type: 'text',
         readonly: false,
       },
       {
-        name: 'Opposite side of chart',
+        title: 'Opposite side of chart',
         type: 'checkbox',
         readonly: false,
       },
       {
-        name: 'Reversed Direction',
+        title: 'Reversed Direction',
         type: 'checkbox',
         readonly: false,
       },
       {
-        name: 'Label Format',
+        title: 'Label Format',
         type: 'text',
         value: '{value}',
         readonly: false,
@@ -37,31 +37,31 @@ const Features: FeaturesProps[] = [
     enabled: false,
     options: [
       {
-        name: 'Enable Legend',
+        title: 'Enable Legend',
         value: true,
         type: 'checkbox',
         readonly: false,
       },
       {
-        name: 'Layout',
+        title: 'Layout',
         value: ['horizontal', 'vertical'],
         type: 'select',
         readonly: false,
       },
       {
-        name: 'Horizontal Alignment',
+        title: 'Horizontal Alignment',
         value: ['left', 'center', 'right'],
         type: 'select',
         readonly: false,
       },
       {
-        name: 'Vertical Alignment',
+        title: 'Vertical Alignment',
         value: ['bottom', 'middle', 'top'],
         type: 'select',
         readonly: false,
       },
       {
-        name: 'Box Color',
+        title: 'Box Color',
         value: '#000',
         type: 'color',
         readonly: false,
@@ -78,6 +78,12 @@ const Features: FeaturesProps[] = [
     id: 'tooltip',
     title: 'Tooltip',
     description: 'Customize Series Tooltip',
+    enabled: false,
+  },
+  {
+    id: 'chartType',
+    title: 'Chart Type',
+    description: 'Choose Chart Type',
     enabled: false,
   },
 ];

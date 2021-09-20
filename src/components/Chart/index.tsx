@@ -2,8 +2,6 @@ import { useState } from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import { BuildLegend } from '../../utils/Charts';
-
 import { Container } from './Container';
 
 interface ChartProps {
@@ -86,11 +84,6 @@ export const Chart = ({ title, subtitle }: ChartProps) => {
   });
 
   // set chart legend
-  options.legend = BuildLegend({
-    layout: 'vertical',
-    verticalAlign: 'middle',
-    align: 'right',
-  });
   // set chart data
   // set chart axios
   // set chart colours

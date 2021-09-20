@@ -36,9 +36,13 @@ i18n
                         tooltip: {
                             name: 'Tooltip',
                             description: 'Customize Tooltip',
+                        },
+                        chartType: {
+                            name: 'Chart Type',
+                            description: 'Choose Chart Type',
                         }
                     },
-                    comingSoon: 'Coming soon, guys!'
+                    comingSoon: 'Coming soon, guys!',
                 }
             },
             ptBR: {
@@ -65,7 +69,11 @@ i18n
                         tooltip: {
                             name: 'Dica de Ferramenta',
                             description: 'Personalize a Dica de Ferramenta',
-                        }
+                        },
+                        chartType: {
+                            name: 'Tipo de Gráfico',
+                            description: 'Personalize o Tipo de Gráfico',
+                        },
                     },
                     comingSoon: 'Em breve, galera!'
                 }
@@ -94,7 +102,11 @@ i18n
                         tooltip: {
                             name: 'Verktøytips',
                             description: 'Tilpass verktøytips',
-                        }
+                        },
+                        chartType: {
+                            name: 'Grafisk type',
+                            description: 'Velg grafisk type',
+                        },
                     },
                     comingSoon: 'Kommer snart, gjester!'
                 }
@@ -111,7 +123,8 @@ i18n
                         axis: { name: 'Axi', description: 'Tilpass aksar' },
                         legend: { name: 'Skýringar', description: 'Tilpass skýringar' },
                         colorTheme: { name: 'Farge tema', description: 'Tilpass farge tema' },
-                        tooltip: { name: 'Verktøytips', description: 'Tilpass verktøytips' }
+                        tooltip: { name: 'Verktøytips', description: 'Tilpass verktøytips' },
+                        chartType: { name: 'Grafisk típus', description: 'Velja grafisk típus' },
                     },
                     comingSoon: 'Kommer snart, gjester!'
                 }
@@ -128,7 +141,8 @@ i18n
                         axis: { name: 'Ejes', description: 'Personalizar ejes' },
                         legend: { name: 'Leyenda', description: 'Personalizar leyenda' },
                         colorTheme: { name: 'Tema de color', description: 'Personalizar tema de color' },
-                        tooltip: { name: 'Tooltip', description: 'Personalizar tooltip' }
+                        tooltip: { name: 'Tooltip', description: 'Personalizar tooltip' },
+                        chartType: { name: 'Tipo de gráfico', description: 'Elegir tipo de gráfico' },
                     },
                     comingSoon: '¡Próximamente, amigos!'
                 }
@@ -145,7 +159,8 @@ i18n
                         axis: { name: 'Axes', description: 'Personnaliser les axes' },
                         legend: { name: 'Légende', description: 'Personnaliser la légende' },
                         colorTheme: { name: 'Thème de couleur', description: 'Personnaliser le thème de couleur' },
-                        tooltip: { name: 'Info-bulle', description: 'Personnaliser l\'info-bulle' }
+                        tooltip: { name: 'Info-bulle', description: 'Personnaliser l\'info-bulle' },
+                        chartType: { name: 'Type de graphique', description: 'Choisir le type de graphique' }
                     },
                     comingSoon: 'Prochainement, les gens!'
                 }
@@ -162,7 +177,8 @@ i18n
                         axis: { name: 'Assi', description: 'Personalizzare gli assi' },
                         legend: { name: 'Legenda', description: 'Personalizzare la legenda' },
                         colorTheme: { name: 'Tema di colore', description: 'Personalizzare il tema di colore' },
-                        tooltip: { name: 'Tooltip', description: 'Personalizzare il tooltip' }
+                        tooltip: { name: 'Tooltip', description: 'Personalizzare il tooltip' },
+                        chartType: { name: 'Tipo di grafico', description: 'Scegliere il tipo di grafico' }
                     },
                     comingSoon: 'In arrivo, amici!'
                 }
@@ -179,7 +195,8 @@ i18n
                         axis: { name: 'Achsen', description: 'Achsen anpassen' },
                         legend: { name: 'Legende', description: 'Legende anpassen' },
                         colorTheme: { name: 'Farbtema', description: 'Farbtema anpassen' },
-                        tooltip: { name: 'Tooltip', description: 'Tooltip anpassen' }
+                        tooltip: { name: 'Tooltip', description: 'Tooltip anpassen' },
+                        chartType: { name: 'Grafiktyp', description: 'Grafiktyp anpassen' }
                     },
                     comingSoon: 'Kommt bald, Freunde!'
                 }
@@ -196,7 +213,8 @@ i18n
                         axis: { name: 'Оси', description: 'Настройка осей' },
                         legend: { name: 'Легенда', description: 'Настройка легенды' },
                         colorTheme: { name: 'Цветовая тема', description: 'Настройка цветовой темы' },
-                        tooltip: { name: 'Подсказка', description: 'Настройка подсказки' }
+                        tooltip: { name: 'Подсказка', description: 'Настройка подсказки' },
+                        chartType: { name: 'Тип графика', description: 'Выбор типа графика' }
                     },
                     comingSoon: 'Скоро, друзья!'
                 }
@@ -213,7 +231,8 @@ i18n
                         axis: { name: 'Axlar', description: 'Anpassa axlar' },
                         legend: { name: 'Symboler', description: 'Anpassa symboler' },
                         colorTheme: { name: 'Färgtema', description: 'Anpassa färgtema' },
-                        tooltip: { name: 'Verktygstips', description: 'Anpassa verktygstips' }
+                        tooltip: { name: 'Verktygstips', description: 'Anpassa verktygstips' },
+                        chartType: { name: 'Diagramtyp', description: 'Välj diagramtyp' }
                     },
                     comingSoon: 'Kommer snart, gäster!'
                 }
@@ -230,9 +249,28 @@ i18n
                         axis: { name: '轴', description: '轴设置' },
                         legend: { name: '图例', description: '图例设置' },
                         colorTheme: { name: '颜色主题', description: '颜色主题设置' },
-                        tooltip: { name: '工具提示', description: '工具提示设置' }
+                        tooltip: { name: '工具提示', description: '工具提示设置' },
+                        chartType: { name: '图表类型', description: '选择图表类型' }
                     },
                     comingSoon: '即将来临，朋友们！'
+                }
+            },
+            hi: {
+                translation: {
+                    greet: {
+                        text: 'स्वागत है, विकासकों'
+                    },
+                    footer: {
+                        text: 'डेटा दृश्यता है और हाइक्रोश - एक Welcome, Developer परियोजना के लिए।',
+                    },
+                    chart: {
+                        axis: { name: 'अक्ष', description: 'अक्ष सेट करें' },
+                        legend: { name: 'लिजेंड', description: 'लिजेंड सेट करें' },
+                        colorTheme: { name: 'रंग थीम', description: 'रंग थीम सेट करें' },
+                        tooltip: { name: 'टूलटिप', description: 'टूलटिप सेट करें' },
+                        chartType: { name: 'चार्ट प्रकार', description: 'चार्ट प्रकार सेट करें' }
+                    },
+                    comingSoon: 'जल्द ही आपको स्वागत है, मित्रों!'
                 }
             },
         }

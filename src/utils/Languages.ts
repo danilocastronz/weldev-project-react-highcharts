@@ -78,6 +78,13 @@ const Languages: LanguagesProps[] = [
     flag: '🇸🇪',
     active: true,
   },
+  {
+    index: 11,
+    code: 'hi',
+    name: 'Hindi',
+    flag: '🇮🇳',
+    active: true,
+  },
 ];
 
 export default Languages;

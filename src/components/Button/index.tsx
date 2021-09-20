@@ -1,29 +1,29 @@
-import styled from '@emotion/styled';
 import { Button as MuiButton, Tooltip } from '@mui/material';
+import styled from '@emotion/styled';
 import { useTranslation } from 'react-i18next';
+
+import { Feature } from '../../types/Features';
 
 interface StyledButtonProps {
   enabled?: boolean;
 }
 
 interface ButtonProps {
-  id: string;
-  label: string;
-  description: string;
-  enabled?: boolean;
+  feature: Feature;
+  onOpenOptions: (feature: Feature) => void;
 }
 
-export const Button = ({ id, label, description, enabled = true }: ButtonProps) => {
+export const Button = ({ feature, onOpenOptions }: ButtonProps) => {
   const { t } = useTranslation();
+
+  const tooltip = feature.enabled
+    ? t(`chart.${feature.id}.description`)
+    : `${t(`chart.${feature.id}.description`)} (${t('comingSoon')})`;
+
   return (
-    <Tooltip
-      key={`tooltip-${id}`}
-      placement="bottom"
-      title={enabled ? description : `${description} (${t('comingSoon')})`}
-      arrow
-    >
-      <StyledButton variant="outlined" color="primary">
-        {label}
+    <Tooltip key={`tooltip-${feature.id}`} placement="bottom" title={tooltip} arrow followCursor>
+      <StyledButton variant="outlined" color="primary" enabled={feature.enabled} onClick={() => onOpenOptions(feature)}>
+        {t(`chart.${feature.id}.name`)}
       </StyledButton>
     </Tooltip>
   );
@@ -31,6 +31,7 @@ export const Button = ({ id, label, description, enabled = true }: ButtonProps) 
 
 const StyledButton = styled(MuiButton)<StyledButtonProps>`
   min-width: 150px;
+  margin: 7px;
   box-shadow: 0px 2px 4px -1px rgba(5, 105, 236, 0.5);
   cursor: ${(props) => (props.enabled ? 'pointer' : 'not-allowed')};
   :hover {

@@ -1,24 +1,36 @@
+import React from 'react';
 import styled from '@emotion/styled';
-import { useTranslation } from 'react-i18next';
 
 import { Button } from '../Button';
+import { MenuOptions } from './MenuOptions';
 
 import Features from '../../utils/Features';
-import { FeaturesProps } from '../../types/Features';
+import { Feature } from '../../types/Features';
 
 export const Menu = () => {
-  const { t } = useTranslation();
+  const [openOptions, setOpenOptions] = React.useState(false);
+  const [openedFeature, setOpenedFeature] = React.useState<Feature | null>(null);
+
+  const handleOpenOptions = (feature: Feature) => {
+    setOpenOptions(true);
+    setOpenedFeature(feature);
+  };
+
+  const handleClose = () => {
+    setOpenOptions(false);
+    setOpenedFeature(null);
+  };
+
   return (
     <MenuContainer>
-      {Features.map((feature: FeaturesProps) => (
+      {Features.sort((e) => (e.enabled ? 0 : 1)).map((feature: Feature) => (
         <Button
           key={feature.id}
-          id={feature.id}
-          label={t(`chart.${feature.id}.name`)}
-          description={t(`chart.${feature.id}.description`)}
-          enabled={feature.enabled}
+          feature={feature}
+          onOpenOptions={(feature: Feature) => feature.enabled && handleOpenOptions(feature)}
         />
       ))}
+      {openedFeature && <MenuOptions feature={openedFeature} open={openOptions} onClose={handleClose} />}
     </MenuContainer>
   );
 };
@@ -29,7 +41,4 @@ const MenuContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  > * {
-    margin: 5px;
-  }
 `;
