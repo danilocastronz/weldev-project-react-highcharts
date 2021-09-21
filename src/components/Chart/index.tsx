@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import exporting from 'highcharts/modules/exporting';
+
+// enable the exporting module
+exporting(Highcharts);
 
 import { Container } from './Container';
 
