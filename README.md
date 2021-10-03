@@ -1,3 +1,5 @@
+![](./highcharts-long.svg)
+
 # Data Visualization App with Highcharts
 
 ## Introduction
