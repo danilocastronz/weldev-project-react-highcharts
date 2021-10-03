@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Highcharts is one of the most popular and greatest library for charting available today. Used by over 80 of the world's 100 largest companies. It is used in a wide variety of applications, including data visualization, financial analysis, and much more. It is a great tool for creating beautiful charts and interactive data visualizations.
+[Highcharts](https://www.highcharts.com/) is one of the most popular and greatest library for charting available today. It's built by Highsoft, and used by over 80 of the world's 100 largest companies. It is used in a wide variety of applications, including data visualization, financial analysis, and much more. It is a great tool for creating beautiful charts and interactive data visualizations.
 
 This is a simple data visualization application that shows how to use Highcharts with React. The application is built with React and uses the Highcharts-React wrapper to render the chart. Through the use of the Highcharts API, the application can be easily customized to display different chart types, different chart data, and different chart options.
 
