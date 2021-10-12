@@ -8,6 +8,5 @@ const ChartContainer = styled(Paper)`
   /* layout */
   width: 90%;
   /* style */
-  box-shadow: ${(props) =>
-    props.theme.palette.mode === 'light' ? '0 0 6px rgba(5, 105, 236, 0.5)' : '0 0 80px rgba(5, 105, 236, 0.5)'};
+  box-shadow: 0 0 6px rgba(5, 105, 236, 0.5);
 `;

@@ -10,7 +10,7 @@ interface StyledButtonProps {
 
 interface ButtonProps {
   feature: Feature;
-  onOpenOptions: (feature: Feature) => void;
+  onOpenOptions: () => void;
 }
 
 export const Button = ({ feature, onOpenOptions }: ButtonProps) => {
@@ -22,7 +22,7 @@ export const Button = ({ feature, onOpenOptions }: ButtonProps) => {
 
   return (
     <Tooltip key={`tooltip-${feature.id}`} placement="bottom" title={tooltip} arrow followCursor>
-      <StyledButton variant="outlined" color="primary" enabled={feature.enabled} onClick={() => onOpenOptions(feature)}>
+      <StyledButton variant="outlined" color="primary" enabled={feature.enabled} onClick={onOpenOptions}>
         {t(`chart.${feature.id}.name`)}
       </StyledButton>
     </Tooltip>

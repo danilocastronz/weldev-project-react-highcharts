@@ -27,7 +27,7 @@ export const Menu = () => {
         <Button
           key={feature.id}
           feature={feature}
-          onOpenOptions={(feature: Feature) => feature.enabled && handleOpenOptions(feature)}
+          onOpenOptions={() => feature.enabled && handleOpenOptions(feature)}
         />
       ))}
       {openedFeature && <MenuOptions feature={openedFeature} open={openOptions} onClose={handleClose} />}

@@ -43,6 +43,8 @@ i18n
                         }
                     },
                     comingSoon: 'Coming soon, guys!',
+                    close: 'Close',
+                    apply: 'Apply',
                 }
             },
             ptBR: {
@@ -75,7 +77,9 @@ i18n
                             description: 'Personalize o Tipo de Gráfico',
                         },
                     },
-                    comingSoon: 'Em breve, galera!'
+                    comingSoon: 'Em breve, galera!',
+                    close: 'Fechar',
+                    apply: 'Aplicar',
                 }
             },
             no: {
@@ -108,7 +112,9 @@ i18n
                             description: 'Velg grafisk type',
                         },
                     },
-                    comingSoon: 'Kommer snart, gjester!'
+                    comingSoon: 'Kommer snart, gjester!',
+                    close: 'Lukk',
+                    apply: 'Bruk',
                 }
             },
             is: {
@@ -126,7 +132,9 @@ i18n
                         tooltip: { name: 'Verktøytips', description: 'Tilpass verktøytips' },
                         chartType: { name: 'Grafisk típus', description: 'Velja grafisk típus' },
                     },
-                    comingSoon: 'Kommer snart, gjester!'
+                    comingSoon: 'Kommer snart, gjester!',
+                    close: 'Loka',
+                    apply: 'Nota',
                 }
             },
             es: {
@@ -144,7 +152,9 @@ i18n
                         tooltip: { name: 'Tooltip', description: 'Personalizar tooltip' },
                         chartType: { name: 'Tipo de gráfico', description: 'Elegir tipo de gráfico' },
                     },
-                    comingSoon: '¡Próximamente, amigos!'
+                    comingSoon: '¡Próximamente, amigos!',
+                    close: 'Cerrar',
+                    apply: 'Aplicar',
                 }
             },
             fr: {
@@ -162,7 +172,9 @@ i18n
                         tooltip: { name: 'Info-bulle', description: 'Personnaliser l\'info-bulle' },
                         chartType: { name: 'Type de graphique', description: 'Choisir le type de graphique' }
                     },
-                    comingSoon: 'Prochainement, les gens!'
+                    comingSoon: 'Prochainement, les gens!',
+                    close: 'Fermer',
+                    apply: 'Appliquer',
                 }
             },
             it: {
@@ -180,7 +192,9 @@ i18n
                         tooltip: { name: 'Tooltip', description: 'Personalizzare il tooltip' },
                         chartType: { name: 'Tipo di grafico', description: 'Scegliere il tipo di grafico' }
                     },
-                    comingSoon: 'In arrivo, amici!'
+                    comingSoon: 'In arrivo, amici!',
+                    close: 'Chiudi',
+                    apply: 'Applica',
                 }
             },
             de: {
@@ -198,7 +212,9 @@ i18n
                         tooltip: { name: 'Tooltip', description: 'Tooltip anpassen' },
                         chartType: { name: 'Grafiktyp', description: 'Grafiktyp anpassen' }
                     },
-                    comingSoon: 'Kommt bald, Freunde!'
+                    comingSoon: 'Kommt bald, Freunde!',
+                    close: 'Schließen',
+                    apply: 'Anwenden',
                 }
             },
             ru: {
@@ -216,7 +232,9 @@ i18n
                         tooltip: { name: 'Подсказка', description: 'Настройка подсказки' },
                         chartType: { name: 'Тип графика', description: 'Выбор типа графика' }
                     },
-                    comingSoon: 'Скоро, друзья!'
+                    comingSoon: 'Скоро, друзья!',
+                    close: 'Закрыть',
+                    apply: 'Применить',
                 }
             },
             se: {
@@ -234,7 +252,9 @@ i18n
                         tooltip: { name: 'Verktygstips', description: 'Anpassa verktygstips' },
                         chartType: { name: 'Diagramtyp', description: 'Välj diagramtyp' }
                     },
-                    comingSoon: 'Kommer snart, gäster!'
+                    comingSoon: 'Kommer snart, gäster!',
+                    close: 'Stäng',
+                    apply: 'Verkställ',
                 }
             },
             zh: {
@@ -252,7 +272,9 @@ i18n
                         tooltip: { name: '工具提示', description: '工具提示设置' },
                         chartType: { name: '图表类型', description: '选择图表类型' }
                     },
-                    comingSoon: '即将来临，朋友们！'
+                    comingSoon: '即将来临，朋友们！',
+                    close: '关闭',
+                    apply: '应用',
                 }
             },
             hi: {
@@ -270,7 +292,9 @@ i18n
                         tooltip: { name: 'टूलटिप', description: 'टूलटिप सेट करें' },
                         chartType: { name: 'चार्ट प्रकार', description: 'चार्ट प्रकार सेट करें' }
                     },
-                    comingSoon: 'जल्द ही आपको स्वागत है, मित्रों!'
+                    comingSoon: 'जल्द ही आपको स्वागत है, मित्रों!',
+                    close: 'बंद करें',
+                    apply: 'लागू करें',
                 }
             },
         }

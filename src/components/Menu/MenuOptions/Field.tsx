@@ -1,20 +1,18 @@
-import { Checkbox, Select, TextField } from '@mui/material';
-import { Color, ColorPicker, createColor } from 'material-ui-color';
 import { useState } from 'react';
-import { FeatureOption } from '../../../types/Features';
+import { Checkbox, MenuItem, Select, TextField } from '@mui/material';
+import { Color, ColorPicker, createColor } from 'material-ui-color';
+
+import { FeatureOption, FeatureOptionValueList } from '../../../types/Features';
 
 interface FieldProps {
   option: FeatureOption;
 }
 
 export const Field = ({ option }: FieldProps) => {
-  const [color, setColor] = useState(createColor('red'));
+  const [color, setColor] = useState(createColor('#F1F1F1'));
 
   const handleChange = (newValue: Color) => {
-    console.log('change', newValue);
-    // setColor(`#${newValue.hex}`);
     setColor(newValue);
-    // action('changed')(newValue);
   };
 
   const handleCheckbox = () => {
@@ -25,7 +23,15 @@ export const Field = ({ option }: FieldProps) => {
     case 'text':
       return <TextField {...option} />;
     case 'select':
-      return <Select {...option} />;
+      return (
+        <Select value={option.value && (option.value as FeatureOptionValueList[]).find((e) => e.isDefault)?.id}>
+          {(option.value as FeatureOptionValueList[]).map((value: FeatureOptionValueList) => (
+            <MenuItem key={value.id} value={value.id}>
+              {value.title}
+            </MenuItem>
+          ))}
+        </Select>
+      );
     case 'number':
       return <TextField {...option} />;
     case 'checkbox':
