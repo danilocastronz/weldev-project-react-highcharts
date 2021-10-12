@@ -1,36 +1,36 @@
-import React from 'react';
+import { useState } from 'react';
 import styled from '@emotion/styled';
 
 import { Button } from '../Button';
 import { MenuOptions } from './MenuOptions';
 
-import Features from '../../utils/Features';
-import { Feature } from '../../types/Features';
+import { AppChartMetadata } from '../../utils';
+import { Metadata } from '../../types/Metadata';
 
 export const Menu = () => {
-  const [openOptions, setOpenOptions] = React.useState(false);
-  const [openedFeature, setOpenedFeature] = React.useState<Feature | null>(null);
+  const [openOptions, setOpenOptions] = useState(false);
+  const [openedItem, setOpenedItem] = useState<Metadata | null>(null);
 
-  const handleOpenOptions = (feature: Feature) => {
+  const handleOpenOptions = (metadata: Metadata) => {
     setOpenOptions(true);
-    setOpenedFeature(feature);
+    setOpenedItem(metadata);
   };
 
   const handleClose = () => {
     setOpenOptions(false);
-    setOpenedFeature(null);
+    setOpenedItem(null);
   };
 
   return (
     <MenuContainer>
-      {Features.sort((e) => (e.enabled ? 0 : 1)).map((feature: Feature) => (
+      {AppChartMetadata.sort((e) => (e.enabled ? -1 : 1)).map((metadata: Metadata) => (
         <Button
-          key={feature.id}
-          feature={feature}
-          onOpenOptions={() => feature.enabled && handleOpenOptions(feature)}
+          key={metadata.id}
+          metadata={metadata}
+          onOpenOptions={() => metadata.enabled && handleOpenOptions(metadata)}
         />
       ))}
-      {openedFeature && <MenuOptions feature={openedFeature} open={openOptions} onClose={handleClose} />}
+      {openedItem && <MenuOptions metadata={openedItem} open={openOptions} onClose={handleClose} />}
     </MenuContainer>
   );
 };

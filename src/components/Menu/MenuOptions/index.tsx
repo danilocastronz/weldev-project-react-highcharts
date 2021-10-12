@@ -12,15 +12,15 @@ import { useTranslation } from 'react-i18next';
 
 import { Field } from './Field';
 
-import { Feature } from '../../../types/Features';
+import { Metadata } from '../../../types/Metadata';
 
 interface MenuOptionsProps {
-  feature: Feature | null;
+  metadata: Metadata | null;
   open: boolean;
   onClose: () => void;
 }
 
-export const MenuOptions = ({ feature, open, onClose }: MenuOptionsProps) => {
+export const MenuOptions = ({ metadata, open, onClose }: MenuOptionsProps) => {
   const { t } = useTranslation();
 
   const handleClose = () => {
@@ -32,22 +32,22 @@ export const MenuOptions = ({ feature, open, onClose }: MenuOptionsProps) => {
   };
 
   return (
-    feature && (
+    metadata && (
       <Dialog onClose={handleClose} open={open}>
-        <DialogTitle>{`Chart ${feature.title}`.toLocaleUpperCase()}</DialogTitle>
+        <DialogTitle>{`Chart ${metadata.title}`.toLocaleUpperCase()}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            {`Set the following values to customize your chart ${feature.title.toLocaleLowerCase()}.`}
+            {`Set the following values to customize your chart ${metadata.title.toLocaleLowerCase()}.`}
           </DialogContentText>
           <Box sx={{ p: 1 }}>
-            {feature.options &&
-              feature.options.map((option, index) => (
+            {metadata.customizations &&
+              metadata.customizations.map((option, index) => (
                 <Box
                   key={`${index}-${option.title}`}
                   sx={{ p: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                 >
                   <Typography variant="body1">{option.title}</Typography>
-                  <Field option={option} />
+                  <Field customization={option} />
                 </Box>
               ))}
           </Box>

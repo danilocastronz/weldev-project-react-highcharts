@@ -1,4 +1,4 @@
 import Languages from './Languages';
-import Features from './Features';
+import AppChartMetadata from './Metadata';
 
-export { Languages, Features };
+export { Languages, AppChartMetadata };

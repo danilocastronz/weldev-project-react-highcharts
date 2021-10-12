@@ -2,28 +2,28 @@ import { Button as MuiButton, Tooltip } from '@mui/material';
 import styled from '@emotion/styled';
 import { useTranslation } from 'react-i18next';
 
-import { Feature } from '../../types/Features';
+import { Metadata } from '../../types/Metadata';
 
 interface StyledButtonProps {
   enabled?: boolean;
 }
 
 interface ButtonProps {
-  feature: Feature;
+  metadata: Metadata;
   onOpenOptions: () => void;
 }
 
-export const Button = ({ feature, onOpenOptions }: ButtonProps) => {
+export const Button = ({ metadata, onOpenOptions }: ButtonProps) => {
   const { t } = useTranslation();
 
-  const tooltip = feature.enabled
-    ? t(`chart.${feature.id}.description`)
-    : `${t(`chart.${feature.id}.description`)} (${t('comingSoon')})`;
+  const tooltip = metadata.enabled
+    ? t(`chart.${metadata.id}.description`)
+    : `${t(`chart.${metadata.id}.description`)} (${t('comingSoon')})`;
 
   return (
-    <Tooltip key={`tooltip-${feature.id}`} placement="bottom" title={tooltip} arrow followCursor>
-      <StyledButton variant="outlined" color="primary" enabled={feature.enabled} onClick={onOpenOptions}>
-        {t(`chart.${feature.id}.name`)}
+    <Tooltip key={`tooltip-${metadata.id}`} placement="bottom" title={tooltip} arrow followCursor>
+      <StyledButton variant="outlined" color="primary" enabled={metadata.enabled} onClick={onOpenOptions}>
+        {t(`chart.${metadata.id}.name`)}
       </StyledButton>
     </Tooltip>
   );
