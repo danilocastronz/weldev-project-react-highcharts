@@ -5,10 +5,11 @@ export interface IAppContext {
   Language: string;
   toggleLanguage: (lang: string) => void;
   /* Chart */
-  Legend: [string, string];
-  Axes: [string, string];
-  ColorTheme: [string, string];
-  Tooltip: [string, string];
+  Legend: Highcharts.LegendOptions;
+  Axes: Highcharts.AxisOptions;
+  ColorTheme: Highcharts.ColorAxisOptions;
+  Tooltip: Highcharts.TooltipOptions;
+  Title: Highcharts.TitleOptions;
 }
 
 // Creates a context for the application

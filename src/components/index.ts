@@ -4,5 +4,6 @@ import { ThemeSwitch } from './ThemeSwitch';
 import { Footer } from './Footer';
 import { Greet } from './Greet';
 import { Translation } from './Translation';
+import { Button } from './Button';
 
-export { Chart, Menu, ThemeSwitch, Footer, Greet, Translation };
+export { Chart, Menu, ThemeSwitch, Footer, Greet, Translation, Button };

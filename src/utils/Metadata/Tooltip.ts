@@ -27,7 +27,7 @@ const TooltipMetadata: Metadata = {
     },
     {
       title: 'Border Color',
-      value: '#000',
+      value: '#FFF',
       type: MetadataOptionType.ColorPicker,
       readonly: false,
     },

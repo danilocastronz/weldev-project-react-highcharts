@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from '@emotion/styled';
 
 import { Button } from '../Button';
-import { MenuOptions } from './MenuOptions';
+import { MenuOptionsDialog } from './MenuOptionsDialog';
 
 import { AppChartMetadata } from '../../utils';
 import { Metadata } from '../../types/Metadata';
@@ -30,7 +30,7 @@ export const Menu = () => {
           onOpenOptions={() => metadata.enabled && handleOpenOptions(metadata)}
         />
       ))}
-      {openedItem && <MenuOptions metadata={openedItem} open={openOptions} onClose={handleClose} />}
+      {openedItem && <MenuOptionsDialog metadata={openedItem} open={openOptions} onClose={handleClose} />}
     </MenuContainer>
   );
 };
