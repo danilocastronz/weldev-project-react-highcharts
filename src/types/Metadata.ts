@@ -1,3 +1,5 @@
+import { IAppStore } from '../contexts/AppContext';
+
 export interface MetadataOptionColor {
   id: number;
   value: string;
@@ -31,13 +33,14 @@ export enum MetadataType {
   Tooltip = 'tooltip',
   ColorTheme = 'colorTheme',
   ChartType = 'chartType',
+  Title = 'title',
 }
 
 export interface Metadata {
   id: string;
   type: MetadataType;
   title: string;
-  description: string;
   enabled: boolean;
   customizations?: MetadataOption[];
+  onCallback?: (appStoreInstance: IAppStore) => void;
 }

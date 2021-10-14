@@ -4,7 +4,6 @@ const ChartTypeMetadata: Metadata = {
   id: 'chartType',
   type: MetadataType.ChartType,
   title: 'Chart Type',
-  description: 'Choose Chart Type',
   enabled: true,
   customizations: [
     {

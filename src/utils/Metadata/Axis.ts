@@ -4,7 +4,6 @@ const AxisMetadata: Metadata = {
   id: 'axis',
   type: MetadataType.Axes,
   title: 'Axes',
-  description: 'Customize Chart Axes',
   enabled: true,
   customizations: [
     {

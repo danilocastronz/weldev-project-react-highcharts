@@ -1,19 +1,26 @@
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import styled from '@emotion/styled';
 
 import { Button } from '../Button';
 import { MenuOptionsDialog } from './MenuOptionsDialog';
 
 import { AppChartMetadata } from '../../utils';
-import { Metadata } from '../../types/Metadata';
+import { Metadata, MetadataType } from '../../types/Metadata';
+import { TitleMenuDialog } from './Dialogs';
 
 export const Menu = () => {
   const [openOptions, setOpenOptions] = useState(false);
+  const [isTitleOpened, toggleTitle] = useReducer((isOpened: boolean) => !isOpened, false);
+
   const [openedItem, setOpenedItem] = useState<Metadata | null>(null);
 
   const handleOpenOptions = (metadata: Metadata) => {
-    setOpenOptions(true);
-    setOpenedItem(metadata);
+    if (metadata.type === MetadataType.Title) {
+      toggleTitle();
+    } else {
+      setOpenOptions(true);
+      setOpenedItem(metadata);
+    }
   };
 
   const handleClose = () => {
@@ -31,6 +38,7 @@ export const Menu = () => {
         />
       ))}
       {openedItem && <MenuOptionsDialog metadata={openedItem} open={openOptions} onClose={handleClose} />}
+      {isTitleOpened && <TitleMenuDialog open={isTitleOpened} onClose={toggleTitle} />}
     </MenuContainer>
   );
 };

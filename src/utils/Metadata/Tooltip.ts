@@ -4,7 +4,6 @@ const TooltipMetadata: Metadata = {
   id: 'tooltip',
   type: MetadataType.Tooltip,
   title: 'Tooltip',
-  description: 'Customize Series Tooltip',
   enabled: true,
   customizations: [
     {

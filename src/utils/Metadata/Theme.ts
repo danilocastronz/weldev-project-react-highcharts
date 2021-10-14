@@ -4,7 +4,6 @@ const ThemeMetadata: Metadata = {
   id: 'colorTheme',
   type: MetadataType.ColorTheme,
   title: 'Color Theme',
-  description: 'Customize Chart Color Theme',
   enabled: true,
   customizations: [
     {

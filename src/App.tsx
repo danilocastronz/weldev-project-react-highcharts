@@ -9,16 +9,16 @@ import styled from '@emotion/styled';
 import { Footer, Menu, ThemeSwitch, Chart, Greet, Translation } from './components';
 
 // app context
-import { AppContext } from './context/AppContext';
+import { AppContext } from './contexts/AppContext';
 
-// app client
-import AppClient from './context/AppClient';
+// app store
+import { AppStore } from './store/AppStore';
 
 // app themes
-import { ColorModeContext } from './context/ColorModeContext';
+import { ColorModeContext } from './contexts/ColorModeContext';
 
 const App = () => {
-  const client = new AppClient();
+  const client = new AppStore();
   const [mode, setMode] = useState<'light' | 'dark'>('light');
 
   const colorMode = useMemo(

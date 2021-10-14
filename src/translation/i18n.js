@@ -39,8 +39,12 @@ i18n
                         },
                         chartType: {
                             name: 'Chart Type',
-                            description: 'Choose Chart Type',
-                        }
+                            description: 'Customize Chart Type',
+                        },
+                        title: {
+                            name: 'Title & Subtitle',
+                            description: 'Customize Title & Subtitle',
+                        },
                     },
                     comingSoon: 'Coming soon, guys!',
                     close: 'Close',
@@ -75,6 +79,10 @@ i18n
                         chartType: {
                             name: 'Tipo de Gráfico',
                             description: 'Personalize o Tipo de Gráfico',
+                        },
+                        title: {
+                            name: 'Título & Subtítulo',
+                            description: 'Personalize o Título & Subtítulo',
                         },
                     },
                     comingSoon: 'Em breve, galera!',
@@ -111,6 +119,10 @@ i18n
                             name: 'Grafisk type',
                             description: 'Velg grafisk type',
                         },
+                        title: {
+                            name: 'Tittel & undertittel',
+                            description: 'Tilpass tittel & undertittel',
+                        }
                     },
                     comingSoon: 'Kommer snart, gjester!',
                     close: 'Lukk',
@@ -131,6 +143,7 @@ i18n
                         colorTheme: { name: 'Farge tema', description: 'Tilpass farge tema' },
                         tooltip: { name: 'Verktøytips', description: 'Tilpass verktøytips' },
                         chartType: { name: 'Grafisk típus', description: 'Velja grafisk típus' },
+                        title: { name: 'Titill & undirtitill', description: 'Tilpass titill & undirtitill' },
                     },
                     comingSoon: 'Kommer snart, gjester!',
                     close: 'Loka',
@@ -151,6 +164,7 @@ i18n
                         colorTheme: { name: 'Tema de color', description: 'Personalizar tema de color' },
                         tooltip: { name: 'Tooltip', description: 'Personalizar tooltip' },
                         chartType: { name: 'Tipo de gráfico', description: 'Elegir tipo de gráfico' },
+                        title: { name: 'Título y subtítulo', description: 'Personalizar título y subtítulo' },
                     },
                     comingSoon: '¡Próximamente, amigos!',
                     close: 'Cerrar',
@@ -170,7 +184,8 @@ i18n
                         legend: { name: 'Légende', description: 'Personnaliser la légende' },
                         colorTheme: { name: 'Thème de couleur', description: 'Personnaliser le thème de couleur' },
                         tooltip: { name: 'Info-bulle', description: 'Personnaliser l\'info-bulle' },
-                        chartType: { name: 'Type de graphique', description: 'Choisir le type de graphique' }
+                        chartType: { name: 'Type de graphique', description: 'Choisir le type de graphique' },
+                        title: { name: 'Titre et sous-titre', description: 'Personnaliser le titre et le sous-titre' },
                     },
                     comingSoon: 'Prochainement, les gens!',
                     close: 'Fermer',
@@ -190,7 +205,8 @@ i18n
                         legend: { name: 'Legenda', description: 'Personalizzare la legenda' },
                         colorTheme: { name: 'Tema di colore', description: 'Personalizzare il tema di colore' },
                         tooltip: { name: 'Tooltip', description: 'Personalizzare il tooltip' },
-                        chartType: { name: 'Tipo di grafico', description: 'Scegliere il tipo di grafico' }
+                        chartType: { name: 'Tipo di grafico', description: 'Scegliere il tipo di grafico' },
+                        title: { name: 'Titolo e sottotitolo', description: 'Personalizzare il titolo e il sottotitolo' },
                     },
                     comingSoon: 'In arrivo, amici!',
                     close: 'Chiudi',
@@ -210,7 +226,8 @@ i18n
                         legend: { name: 'Legende', description: 'Legende anpassen' },
                         colorTheme: { name: 'Farbtema', description: 'Farbtema anpassen' },
                         tooltip: { name: 'Tooltip', description: 'Tooltip anpassen' },
-                        chartType: { name: 'Grafiktyp', description: 'Grafiktyp anpassen' }
+                        chartType: { name: 'Grafiktyp', description: 'Grafiktyp anpassen' },
+                        title: { name: 'Titel & Untertitel', description: 'Titel & Untertitel anpassen' },
                     },
                     comingSoon: 'Kommt bald, Freunde!',
                     close: 'Schließen',
@@ -230,7 +247,8 @@ i18n
                         legend: { name: 'Легенда', description: 'Настройка легенды' },
                         colorTheme: { name: 'Цветовая тема', description: 'Настройка цветовой темы' },
                         tooltip: { name: 'Подсказка', description: 'Настройка подсказки' },
-                        chartType: { name: 'Тип графика', description: 'Выбор типа графика' }
+                        chartType: { name: 'Тип графика', description: 'Выбор типа графика' },
+                        title: { name: 'Заголовок и подзаголовок', description: 'Настройка заголовка и подзаголовка' },
                     },
                     comingSoon: 'Скоро, друзья!',
                     close: 'Закрыть',
@@ -250,7 +268,8 @@ i18n
                         legend: { name: 'Symboler', description: 'Anpassa symboler' },
                         colorTheme: { name: 'Färgtema', description: 'Anpassa färgtema' },
                         tooltip: { name: 'Verktygstips', description: 'Anpassa verktygstips' },
-                        chartType: { name: 'Diagramtyp', description: 'Välj diagramtyp' }
+                        chartType: { name: 'Diagramtyp', description: 'Välj diagramtyp' },
+                        title: { name: 'Titel & undertitel', description: 'Anpassa titel & undertitel' },
                     },
                     comingSoon: 'Kommer snart, gäster!',
                     close: 'Stäng',
@@ -270,7 +289,8 @@ i18n
                         legend: { name: '图例', description: '图例设置' },
                         colorTheme: { name: '颜色主题', description: '颜色主题设置' },
                         tooltip: { name: '工具提示', description: '工具提示设置' },
-                        chartType: { name: '图表类型', description: '选择图表类型' }
+                        chartType: { name: '图表类型', description: '选择图表类型' },
+                        title: { name: '标题和副标题', description: '标题和副标题设置' },
                     },
                     comingSoon: '即将来临，朋友们！',
                     close: '关闭',
@@ -290,7 +310,8 @@ i18n
                         legend: { name: 'लिजेंड', description: 'लिजेंड सेट करें' },
                         colorTheme: { name: 'रंग थीम', description: 'रंग थीम सेट करें' },
                         tooltip: { name: 'टूलटिप', description: 'टूलटिप सेट करें' },
-                        chartType: { name: 'चार्ट प्रकार', description: 'चार्ट प्रकार सेट करें' }
+                        chartType: { name: 'चार्ट प्रकार', description: 'चार्ट प्रकार सेट करें' },
+                        title: { name: 'शीर्षक और उपशीर्षक', description: 'शीर्षक और उपशीर्षक सेट करें' },
                     },
                     comingSoon: 'जल्द ही आपको स्वागत है, मित्रों!',
                     close: 'बंद करें',

@@ -3,7 +3,7 @@ import { IconButton, Tooltip } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { NightsStay, WbSunny } from '@mui/icons-material';
 
-import { ColorModeContext } from '../../context/ColorModeContext';
+import { ColorModeContext } from '../../contexts/ColorModeContext';
 
 export const ThemeSwitch = () => {
   const theme = useTheme();

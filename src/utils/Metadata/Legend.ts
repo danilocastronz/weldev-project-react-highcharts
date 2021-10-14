@@ -4,7 +4,6 @@ const LegendMetadata: Metadata = {
   id: 'legend',
   type: MetadataType.Legend,
   title: 'Legend',
-  description: 'Customize Chart Legend',
   enabled: true,
   customizations: [
     {

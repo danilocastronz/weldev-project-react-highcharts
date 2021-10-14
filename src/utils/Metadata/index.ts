@@ -4,9 +4,13 @@ import AxisMetadata from './Axis';
 import ChartTypeMetadata from './ChartType';
 import LegendMetadata from './Legend';
 import ThemeMetadata from './Theme';
+import TitleMetadata from './Title';
 import TooltipMetadata from './Tooltip';
 
 const AppChartMetadata: Metadata[] = [];
+
+// enables chart title customization
+AppChartMetadata[AppChartMetadata.length] = TitleMetadata;
 
 // enables axes customization
 AppChartMetadata[AppChartMetadata.length] = AxisMetadata;

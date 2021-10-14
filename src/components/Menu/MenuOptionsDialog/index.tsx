@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import {
   Button,
   Dialog,
@@ -13,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { Field } from './Field';
 
 import { Metadata, MetadataOptionType } from '../../../types/Metadata';
+import { AppContext, IAppStore } from '../../../contexts/AppContext';
 
 interface MenuOptionsDialogProps {
   metadata: Metadata | null;
@@ -21,6 +23,7 @@ interface MenuOptionsDialogProps {
 }
 
 export const MenuOptionsDialog = ({ metadata, open, onClose }: MenuOptionsDialogProps) => {
+  const appContext = useContext(AppContext);
   const { t } = useTranslation();
 
   const handleClose = () => {
@@ -28,7 +31,7 @@ export const MenuOptionsDialog = ({ metadata, open, onClose }: MenuOptionsDialog
   };
 
   const handleApply = () => {
-    alert('apply');
+    appContext.applyChartTitleAndSubtitle('PD Shine', 'by Danilo Castro');
   };
 
   return (
